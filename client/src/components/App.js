@@ -37,9 +37,9 @@ function App() {
     setMessages(updatedMessages);
   }
 
-  const displayedMessages = messages.filter((message) =>
+  const displayedMessages = messages.length > 0 ? messages.filter((message) =>
     message.body.toLowerCase().includes(search.toLowerCase())
-  );
+  )  : null
 
   return (
     <main className={isDarkMode ? "dark-mode" : ""}>
